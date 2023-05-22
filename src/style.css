@@ -1,0 +1,178 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+body {
+  background: rgb(32, 33, 36);
+}
+
+#app  {
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 1500px;
+}
+
+h1 {
+  font-family: Inter;
+  font-size: 30px;
+  color: #fff;
+}
+
+h2 {
+  font-family: Inter;
+  font-size: 25px;
+  color: #fff;
+}
+
+h3 {
+  font-family: Inter;
+  font-size: 20px;
+  color: #fff;
+}
+
+p {
+  font-family: Inter;
+  color: #fff;
+  line-height: 1.5em;
+  justify-content: baseline;
+}
+
+.card {
+  border-radius: 20px;
+  background: rgb(53, 54, 58);
+}
+
+.card.basic {
+  width: 320px;
+  margin-right: 20px;
+  height: 100%;
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+}
+
+.card.advanced {
+  width: 75%;
+  height: 5000px;
+  padding: 20px;
+}
+
+.avatar {
+  margin: 0 auto 20px auto;
+  background: rgb(74, 75, 80);
+  border-radius: 20px;
+  width: 160px;
+  height: 160px;
+}
+
+.info {
+  display: inline;
+}
+
+.container {
+  margin-bottom: 20px;
+  display: grid; 
+  grid-template-columns: 80px 1fr; 
+  grid-template-rows: 40px 40px; 
+  gap: 0px 20px; 
+  grid-template-areas: 
+    "container_icon container_name"
+    "container_icon container_value"; 
+  justify-items: stretch; 
+}
+
+.container_icon {
+  grid-area: container_icon;
+  background: rgb(74, 75, 80);
+  border-radius: 10px;
+}
+
+.container_name {
+  grid-area: container_name;
+  display: flex;
+}
+
+.container_value {
+  grid-area: container_value;
+  display: flex;
+}
+
+.container_name > h3 {
+  align-self: flex-end;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.linkedin_icon {
+  width: 25px;
+  filter: invert(10%) sepia(91%) saturate(5834%) hue-rotate(358deg) brightness(116%) contrast(114%);
+  
+}
+
+.separator {
+  width: 50px;
+  height: 5px;
+  background-color: red;
+  border-radius: 2.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about_me {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.timeline_container > .content {
+  text-align: justify;
+}
+
+@media screen and (max-width:1400px) {
+  #app {
+    padding: 10px;
+  }
+  .card.basic {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    position: static;
+  }
+  .card.advanced {
+    width: 100%;
+  }
+  .avatar {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width:820px) {
+  .card.advanced {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:820px) and (max-width:1400px) {
+  .info{
+    display: flex;
+    justify-content:space-around;
+    padding-top: 20px;
+  }
+  .container_name, .container_value {
+    width: 200px;
+  }
+}
