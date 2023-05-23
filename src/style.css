@@ -1,6 +1,7 @@
 :root {
   --background: rgb(18, 18, 18);
-  --primary: #f44336;
+  --primary: linear-gradient(90deg, rgba(244,67,54,1) 0%, rgba(173,52,43,1) 100%);
+  --primary-select: #f44336;
   --card-primary: rgb(40, 40, 40);
   --card-secondary: rgb(74, 75, 80);
 }
@@ -14,6 +15,10 @@
 @font-face {
   font-family: Inter;
   src: url(./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+::selection{
+  background: var(--primary-select);
 }
 
 body {
@@ -50,7 +55,7 @@ h3 {
 
 h4 {
   font-family: Inter;
-  font-size: 15px;
+  font-size: 12px;
   color: #eee;
 }
 
@@ -65,6 +70,7 @@ p {
   color: #fff;
   line-height: 1.5em;
   justify-content: baseline;
+  /*font-weight: 300;*/
 }
 
 .card {
@@ -87,12 +93,29 @@ p {
   padding: 20px;
 }
 
+.basic_separator {
+  background: var(--card-secondary);
+  height: 2px;
+  width: 100%;
+  border-radius: 1px;
+  margin: 0 auto 20px auto;
+}
+
 .avatar {
   margin: 0 auto 20px auto;
   background: var(--card-secondary);
   border-radius: 20px;
   width: 160px;
   height: 160px;
+}
+
+.name {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.name > h1 {
+  font-weight: 500;
 }
 
 .job_title {
@@ -102,6 +125,10 @@ p {
   border-radius: 10px;
   width: fit-content;
   height: 100%;
+}
+
+.job_title > h4 {
+  font-weight: 500;
 }
 
 .avatar_img {
@@ -151,6 +178,7 @@ p {
 
 .container_name > h3 {
   align-self: flex-end;
+  color: rgb(158, 158, 158);
 }
 
 .icon {
@@ -158,15 +186,16 @@ p {
   justify-content: center;
 }
 
-.linkedin_icon {
+.social_icon {
   width: 40px;
+  margin: 0 20px 0 20px;
   filter: invert(40%) sepia(44%) saturate(4062%) hue-rotate(339deg) brightness(95%) contrast(101%)
 }
 
 .separator {
   width: 50px;
   height: 5px;
-  background-color: var(--primary);
+  background: var(--primary);
   border-radius: 2.5px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -174,7 +203,10 @@ p {
 
 .about_me {
   text-align: justify;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.resume {
+  margin-bottom: 20px;
 }
 
 .timeline > .timeline_container{
@@ -185,7 +217,7 @@ p {
 
 .timeline_container > .content::before {
   content: "";
-  background-color: var(--primary);
+  background: var(--primary);
   width: 15px;
   height: 15px;
   position: absolute;
@@ -196,7 +228,7 @@ p {
 
 .first > .content::before {
   content: "";
-  background-color: var(--primary);
+  background: var(--primary);
   width: 25px;
   height: 25px;
   position: absolute;
@@ -207,7 +239,7 @@ p {
 
 .timeline_container > .content::after{
   content: "";
-  background-color: var(--primary);
+  background: var(--primary);
   width: 2px;
   position: absolute;
   top: 30px;
@@ -217,7 +249,7 @@ p {
 
 .first > .content::after{
   content: "";
-  background-color: var(--primary);
+  background: var(--primary);
   width: 2px;
   position: absolute;
   top: 33px;
@@ -226,7 +258,7 @@ p {
 }
 
 .last > .content::after{
-  background-color: var(--primary);
+  background: var(--primary);
   width: 0;
   position: absolute;
   top: 0;
@@ -239,6 +271,9 @@ p {
   text-align: justify;
 }
 
+.school {
+  margin-bottom: 20px;
+}
 .project {
   text-align: justify;
 }
@@ -296,5 +331,8 @@ p {
   }
   .container_name, .container_value {
     width: 200px;
+  }
+  .info {
+    padding-top: 0;
   }
 }
