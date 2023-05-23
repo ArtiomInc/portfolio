@@ -48,6 +48,12 @@ h3 {
   color: #fff;
 }
 
+h4 {
+  font-family: Inter;
+  font-size: 15px;
+  color: #eee;
+}
+
 .content > h3 {
   font-size: 15px;
   color: rgb(188, 188, 188);
@@ -87,6 +93,15 @@ p {
   border-radius: 20px;
   width: 160px;
   height: 160px;
+}
+
+.job_title {
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  background-color: var(--card-secondary);
+  border-radius: 10px;
+  width: fit-content;
+  height: 100%;
 }
 
 .avatar_img {
