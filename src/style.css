@@ -191,6 +191,9 @@ p {
   margin: 0 20px 0 20px;
   filter: invert(40%) sepia(44%) saturate(4062%) hue-rotate(339deg) brightness(95%) contrast(101%)
 }
+.social_icon:hover {
+  filter: invert(40%) sepia(44%) saturate(4062%) hue-rotate(339deg) brightness(95%) contrast(101%) drop-shadow(0 0 7px #f44336);
+}
 
 .separator {
   width: 50px;
