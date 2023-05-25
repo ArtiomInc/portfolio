@@ -1,9 +1,13 @@
 :root {
-  --background: rgb(18, 18, 18);
-  --primary: linear-gradient(90deg, rgba(244,67,54,1) 0%, rgba(173,52,43,1) 100%);
-  --primary-select: #f44336;
-  --card-primary: rgb(40, 40, 40);
+  --background: #1e1e20;
+  --primary-no-gradiant-1: #00DC82;
+  --primary-no-gradiant-2: #00844E;
+  --primary: linear-gradient(90deg, var(--primary-no-gradiant-1) 0%, var(--primary-no-gradiant-2) 100%);
+  --card-primary: #252529;
+  --card-primary-hover: #313136;
   --card-secondary: rgb(74, 75, 80);
+  --text-color-high: rgba(255, 255, 255, .9);
+  --text-color-normal: rgba(255, 255, 255, .5);
 }
 
 *, ::before, ::after {
@@ -18,7 +22,7 @@
 }
 
 ::selection{
-  background: var(--primary-select);
+  background: var(--primary-no-gradiant-1);
 }
 
 body {
@@ -38,42 +42,43 @@ body {
 h1 {
   font-family: Inter;
   font-size: 30px;
-  color: #fff;
+  color: var(--text-color-high);
 }
 
 h2 {
   font-family: Inter;
   font-size: 25px;
-  color: #fff;
+  color: var(--text-color-high);
 }
 
 h3 {
   font-family: Inter;
   font-size: 20px;
-  color: #fff;
+  color: var(--text-color-high);
 }
 
 h4 {
   font-family: Inter;
-  font-size: 12px;
-  color: #eee;
+  font-size: 14px;
+  color: var(--text-color-normal);
 }
 
 .content > h3 {
   font-size: 15px;
-  color: rgb(188, 188, 188);
+  color: var(--text-color-high);
   margin-bottom: 5px;
 }
 
 p {
   font-family: Inter;
-  color: #fff;
+  color: var(--text-color-high);
   line-height: 1.5em;
   justify-content: baseline;
   /*font-weight: 300;*/
 }
 
 .card {
+  transition: all 0.2s; 
   border-radius: 20px;
   background: var(--card-primary);
 }
@@ -159,11 +164,22 @@ p {
   background: var(--card-secondary);
   border-radius: 10px;
 }
+.container_icon > a {
+  height: 55%;
+  width: auto;
+  display: flex;
+  transition: all 0.1s;
+  filter: invert(65%) sepia(38%) saturate(6552%) hue-rotate(119deg) brightness(98%) contrast(101%);
+}
+
+.container_icon > a:hover {
+  filter: invert(65%) sepia(38%) saturate(6552%) hue-rotate(119deg) brightness(98%) contrast(101%) drop-shadow(0 0 10px var(--primary-no-gradiant-2));
+}
 
 .container_icon > img {
   height: 55%;
   width: auto;
-  filter: invert(40%) sepia(44%) saturate(4062%) hue-rotate(339deg) brightness(95%) contrast(101%)
+  filter: invert(65%) sepia(38%) saturate(6552%) hue-rotate(119deg) brightness(98%) contrast(101%);
 }
 
 .container_name {
@@ -178,7 +194,7 @@ p {
 
 .container_name > h3 {
   align-self: flex-end;
-  color: rgb(158, 158, 158);
+  color: var(--text-color-normal);
 }
 
 .icon {
@@ -189,10 +205,11 @@ p {
 .social_icon {
   width: 40px;
   margin: 0 20px 0 20px;
-  filter: invert(40%) sepia(44%) saturate(4062%) hue-rotate(339deg) brightness(95%) contrast(101%)
+  transition: all 0.1s;
+  filter: invert(65%) sepia(38%) saturate(6552%) hue-rotate(119deg) brightness(98%) contrast(101%);
 }
 .social_icon:hover {
-  filter: invert(40%) sepia(44%) saturate(4062%) hue-rotate(339deg) brightness(95%) contrast(101%) drop-shadow(0 0 7px #f44336);
+  filter: invert(65%) sepia(38%) saturate(6552%) hue-rotate(119deg) brightness(98%) contrast(101%) drop-shadow(0 0 10px var(--primary-no-gradiant-2));
 }
 
 .separator {
@@ -274,18 +291,36 @@ p {
   text-align: justify;
 }
 
+
+.timeline_container > .content > a {
+  color: var(--text-color-high);
+  font-family: Inter;
+  text-decoration: none;
+  line-height: 2em;
+}
+.timeline_container > .content > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .school {
   margin-bottom: 20px;
 }
+
 .project {
   text-align: justify;
 }
 
 .card_project {
+  transition: all 0.1s;
   background-color: var(--card-secondary);
   border-radius: 10px;
   margin: 10px;
   padding: 15px;
+}
+
+.card_project:hover {
+  outline: 2px solid var(--primary-no-gradiant-2);
 }
 
 .card_project > .head {
@@ -299,6 +334,16 @@ p {
 
 .card_project > .head > .details {
   color: #282828;
+}
+
+.card_project > a {
+  color: var(--primary-no-gradiant-1);
+  font-family: Inter;
+  text-decoration: none;
+  line-height: 2em;
+}
+.card_project > a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width:1200px) {
