@@ -1,7 +1,7 @@
 :root {
   --background: #1e1e20;
-  --primary-no-gradiant-1: #00DC82;
-  --primary-no-gradiant-2: #00844E;
+  --primary-no-gradiant-1: #f2555b;
+  --primary-no-gradiant-2: #e71e4d;
   --primary: linear-gradient(90deg, var(--primary-no-gradiant-1) 0%, var(--primary-no-gradiant-2) 100%);
   --card-primary: #252529;
   --card-primary-hover: #313136;
