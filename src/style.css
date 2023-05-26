@@ -288,9 +288,7 @@ p {
 
 .timeline_container > .content {
   margin-left: 40px;
-  text-align: justify;
 }
-
 
 .timeline_container > .content > a {
   color: var(--text-color-high);
@@ -307,7 +305,7 @@ p {
   margin-bottom: 20px;
 }
 
-.project {
+.justified-test {
   text-align: justify;
 }
 
