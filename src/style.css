@@ -169,10 +169,16 @@ p {
   width: auto;
   display: flex;
   transition: all 0.1s;
+  outline: 1px solid blue;
 }
 
-.container_icon > a:hover {
+.location_icon_img:hover {
   filter: drop-shadow(0 0 10px var(--primary-no-gradiant-2));
+}
+
+.container_icon > img {
+  height: 55%;
+  width: auto;
 }
 
 .container_icon > img {
